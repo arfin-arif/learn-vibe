@@ -44,9 +44,13 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                setError('')
 
             })
-            .catch(error => console.log(error))
+            .catch(error => {
+                console.log(error)
+                setError(error.message)
+            })
     }
 
     const handleGitSignIn = () => {
@@ -87,8 +91,12 @@ const Login = () => {
                 </Form>
 
                 <p>New to Learn Vibe ?<Link to='/register'> <span className='register-now'>Register Now</span> </Link> </p>
-                <div className='pb-5 text-center'>
-                    <p>Or Sing Up Using</p>
+                <div className=' text-center'>
+                    <div class="divider d-flex align-items-center ">
+                        <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+                    </div>
+
+                    <p>Log In Using</p>
                     <FaGoogle onClick={handleGoogleSigIn}></FaGoogle>
                     <FaGithub onClick={handleGitSignIn} className='ms-3'></FaGithub>
 

@@ -52,7 +52,7 @@ const Register = () => {
 
 
     return (
-        <div className='d-flex justify-content-center align-items-center login-container'>
+        <div className='d-flex justify-content-center align-items-center login-container  '>
             <div className='log-in'>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">

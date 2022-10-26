@@ -5,11 +5,11 @@ import './Home.css'
 const Home = () => {
     return (
         <div className=''>
-            <h2>This is Home</h2>
+
             <Container>
                 <Row>
 
-                    <Col lg='6'>
+                    <Col lg='6' className='d-flex justify-content-center align-items-center'>
                         <div>
                             <h1>Education Is A Path To Success In Life</h1>
                             <p>Education will help u to accquire whatever you want to earn</p>

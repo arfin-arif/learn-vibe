@@ -1,11 +1,19 @@
 .login-container {
     height: 500px;
-
     background: linear-gradient(to left, #FBF2F3, #FEF6F3);
+}
+
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
 }
 
 .log-in {
     padding: 25px;
+    padding-bottom: 0;
     border-radius: 10px;
     background-color: white;
 }
