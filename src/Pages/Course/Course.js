@@ -4,6 +4,7 @@ import CourseSummaryCard from '../Shared/CourseSummaryCard/CourseSummaryCard';
 
 const Course = () => {
     const courses = useLoaderData()
+
     return (
         <>
 

@@ -4,22 +4,28 @@ import Card from 'react-bootstrap/Card';
 import { Button } from 'react-bootstrap';
 
 const ReadMoreCourse = () => {
-    const c = useLoaderData();
-    // const { cover, instructor, title, info, ratings, id, price } = course;
-    console.log(c)
+    const course = useLoaderData();
+    const { cover, instructor, title, info, ratings, id, price, category_id } = course;
+
 
     return (
-        <Card >
-            {/* {course.length}
-            <Card.Img variant="top" src={cover} /> */}
+        <Card className='container'>
+            <Card.Title>{title}</Card.Title>
+
             <Card.Body>
-                {/* <Card.Title>{title}</Card.Title> */}
+                <Card.Img className='' src={cover} />
                 <Card.Text>
-                    {/* {info} */}
+                    {info}
                 </Card.Text>
                 {/* <Link to={`/category/${category_id}`}>
                     <Button variant="primary">All News In This Category </Button>
                 </Link> */}
+                <div className='d-flex justify-content-between align-items-center'>
+                    <Button variant="dark">Download Detail </Button>
+
+                    <Link to={`/course/premium/${id}`} ><Button variant="dark">Get premium </Button></Link>
+                </div>
+
             </Card.Body>
         </Card>
     );

@@ -4,10 +4,12 @@ import Blog from "../../Pages/Blog/Blog";
 import Course from "../../Pages/Course/Course";
 import Courses from "../../Pages/Courses/Courses";
 import FAQ from "../../Pages/FAQ/FAQ";
+import GetPremium from "../../Pages/GetPremium/GetPremium";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import ReadMoreCourse from "../../Pages/ReadMoreCourse/ReadMoreCourse";
 import Register from "../../Pages/Register/Register";
+import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 
 
 export const routes = createBrowserRouter([
@@ -34,16 +36,23 @@ export const routes = createBrowserRouter([
 
             },
             {
+                path: '/course/premium/:id',
+                element: <PrivateRoutes> <GetPremium></GetPremium> </PrivateRoutes>,
+                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+            },
+
+            {
                 path: '/courses/:id',
                 element: <ReadMoreCourse></ReadMoreCourse>,
-                loader: (params) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
             },
 
             {
                 path: '/category/:id',
-                element: <div className="container">
-
-                    <Course></Course> </div>,
+                element:
+                    <div className="container">
+                        <Course></Course>
+                    </div>,
                 loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
             },
             {
