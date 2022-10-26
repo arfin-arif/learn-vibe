@@ -8,10 +8,18 @@ import LeftSideNav from '../LeftSideNav/LeftSideNav';
 import { FaBook, FaUser } from "react-icons/fa";
 import { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 import './Header.css'
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext)
+    const renderTooltip = (props) => (
+        <Tooltip id="button-tooltip" {...props}>
+            {user?.displayName}
+        </Tooltip>
+    );
+
 
     const handleLogOut = () => {
         logOut()
@@ -36,7 +44,7 @@ const Header = () => {
                                 {
                                     user?.uid ?
                                         <>
-                                            <span> {user?.displayName}</span>
+
                                             <Button
                                                 className='ms-1' variant='secondary' onClick={handleLogOut}>Log Out</Button>
 
@@ -51,9 +59,15 @@ const Header = () => {
                             </Nav.Link>
                             <Nav.Link eventKey={2} href="#memes">
                                 {user?.photoURL ?
-                                    <Image style={{ height: '30px' }}
-                                        roundedCircle
-                                        src={user?.photoURL}></Image> : <FaUser></FaUser>
+                                    <OverlayTrigger
+                                        placement="right"
+                                        delay={{ show: 250, hide: 400 }}
+                                        overlay={renderTooltip}
+                                    >
+                                        <Image style={{ height: '30px' }}
+                                            roundedCircle
+                                            src={user?.photoURL}></Image>
+                                    </OverlayTrigger> : <FaUser></FaUser>
                                 }
                             </Nav.Link>
                         </Nav>
