@@ -1,3 +1,15 @@
-.login-form {
-    margin: 20px auto;
+.login-container {
+    height: 500px;
+
+    background: linear-gradient(to left, #FBF2F3, #FEF6F3);
+}
+
+.log-in {
+    padding: 25px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.register-now {
+    color: blue;
 }

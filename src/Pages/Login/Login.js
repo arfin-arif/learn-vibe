@@ -64,8 +64,8 @@ const Login = () => {
     return (
 
 
-        <div className='d-flex justify-content-center align-items-center'>
-            <div className=''>
+        <div className='d-flex justify-content-center align-items-center login-container'>
+            <div className='log-in'>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
@@ -73,7 +73,7 @@ const Login = () => {
 
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Group className="" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control className='' type="password" name='password' placeholder="Password" required />
                     </Form.Group>
@@ -86,16 +86,12 @@ const Login = () => {
                     </Button>
                 </Form>
 
-                <p>New to Learn Vibe <Link to='/register'>Register Now</Link> </p>
-                <p>Or Sing Up Using</p>
-                <div className='pb-5'>
+                <p>New to Learn Vibe ?<Link to='/register'> <span className='register-now'>Register Now</span> </Link> </p>
+                <div className='pb-5 text-center'>
+                    <p>Or Sing Up Using</p>
                     <FaGoogle onClick={handleGoogleSigIn}></FaGoogle>
                     <FaGithub onClick={handleGitSignIn} className='ms-3'></FaGithub>
-                    {/* <ButtonGroup vertical>
-                    <Button  variant='outline-primary' > Login With Google  </Button>
-                    <Button variant='outline-dark'> Login With GitHub </Button>
 
-                </ButtonGroup> */}
                 </div>
 
             </div>
