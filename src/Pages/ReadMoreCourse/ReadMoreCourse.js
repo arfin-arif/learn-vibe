@@ -32,7 +32,7 @@ const ReadMoreCourse = () => {
                 <Card.Header>
                     <Card.Title>{title}</Card.Title>
                     <div className='d-flex justify-content-between align-items-center'>
-                        <Button onClick={pdfGenerate} variant="dark">Download Detail </Button>
+                        <Button onClick={pdfGenerate} variant="dark">Download Details </Button>
                     </div>
                 </Card.Header>
                 <Card.Body>
