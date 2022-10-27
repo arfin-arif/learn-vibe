@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Button, Image } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import LeftSideNav from '../LeftSideNav/LeftSideNav';
 import { FaBook, FaMoon, FaSun, FaUser } from "react-icons/fa";
 import { useContext } from 'react';
@@ -52,9 +52,13 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link > <Link to='/courses'>Courses</Link> </Nav.Link>
-                            <Nav.Link > <Link to='/blog'>Blog</Link> </Nav.Link>
-                            <Nav.Link > <Link to='/faq'>FAQ</Link> </Nav.Link>
+                            <NavLink className={({ isActive }) => isActive ? 'active' : undefined} to=''></NavLink>
+
+                            <div>
+                                <NavLink to='/courses'>    Courses </NavLink>
+                                <NavLink to='/blog'   >    Blog </NavLink>
+                                <NavLink to='/faq'    >     FAQ  </NavLink>
+                            </div>
                         </Nav>
                         <Nav className=''>
                             <Nav.Link>
@@ -68,8 +72,8 @@ const Header = () => {
                                         </>
                                         :
                                         <>
-                                            <Link to='/login'>Login </Link>
-                                            <Link to='/register'>Register </Link>
+                                            <NavLink to='/login'>Login </NavLink>
+                                            <NavLink to='/register'>Register </NavLink>
                                         </>
                                 }
                             </Nav.Link>

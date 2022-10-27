@@ -49,7 +49,7 @@ export const routes = createBrowserRouter([
 
             {
                 path: '/category/:id',
-                element: <div className=" pt-5 row"><Course></Course></div>,
+                element: <div className=" pt-5 row"><Course ></Course></div>,
                 loader: ({ params }) => fetch(`https://learn-vive-server.vercel.app/category/${params.id}`)
 
             },

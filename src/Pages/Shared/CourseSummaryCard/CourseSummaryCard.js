@@ -21,7 +21,7 @@ const CourseSummaryCard = ({ course }) => {
                     ></Image>
                     <div>
                         <p className='mb-0'>   {name}</p>
-                        {/* <p>{published_date}</p> */}
+
                     </div>
                 </div>
                 <div>

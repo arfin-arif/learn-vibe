@@ -14,3 +14,9 @@
     background: linear-gradient(to left, #FBFAFF, #F3F3FD);
     color: #333;
 }
+
+.active {
+    color: #000;
+    font-weight: bold;
+
+}
