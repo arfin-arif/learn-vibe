@@ -34,25 +34,25 @@ export const routes = createBrowserRouter([
             {
                 path: '/courses',
                 element: <Courses></Courses>,
-                loader: () => fetch('http://localhost:5000/courses')
+                loader: () => fetch('https://learn-vive-server.vercel.app/courses')
 
             },
             {
                 path: '/course/premium/:id',
                 element: <PrivateRoutes> <GetPremium></GetPremium> </PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({ params }) => fetch(`https://learn-vive-server.vercel.app/courses/${params.id}`)
             },
 
             {
                 path: '/courses/:id',
                 element: <ReadMoreCourse></ReadMoreCourse>,
-                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({ params }) => fetch(`https://learn-vive-server.vercel.app/courses/${params.id}`)
             },
 
             {
                 path: '/category/:id',
-                element: <CategoryPageCard></CategoryPageCard>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+                element: <Course></Course>,
+                loader: ({ params }) => fetch(`https://learn-vive-server.vercel.app/category/${params.id}`)
 
             },
             {

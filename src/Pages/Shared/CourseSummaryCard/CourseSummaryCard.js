@@ -1,7 +1,7 @@
 import React from 'react';
-import { Image } from 'react-bootstrap';
+import { Button, Image } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
-import { FaDollarSign, FaEye, FaRegBookmark, FaShareAlt, FaStar } from 'react-icons/fa';
+import { FaDollarSign, FaFacebook, FaHeart, FaRegHeart, FaStar } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 import './CourseSummaryCard.css'
 
@@ -10,9 +10,9 @@ const CourseSummaryCard = ({ course }) => {
     const { cover, instructor, title, info, ratings, id, price } = course;
     const { name, profile } = instructor;
     return (
-        <Card className="mb-5 col-12 col-sm-5 col-lg-5  ms-lg-5 ms-sm-4">
+        <Card className="mb-5 col-12 col-sm-5 col-lg-5  ms-lg-5 ms-sm-4 card-bg">
             <Card.Header className='d-flex justify-content-between align-items-center'>
-                <div className='d-flex'>
+                <div className='d-flex align-items-center'>
                     <Image
                         className='me-2'
                         roundedCircle
@@ -25,8 +25,8 @@ const CourseSummaryCard = ({ course }) => {
                     </div>
                 </div>
                 <div>
-                    <FaRegBookmark></FaRegBookmark>
-                    <FaShareAlt></FaShareAlt>
+                    <FaFacebook></FaFacebook>
+                    <FaRegHeart className='ms-1'></FaRegHeart>
                 </div>
             </Card.Header>
             <Card.Body>
@@ -34,8 +34,8 @@ const CourseSummaryCard = ({ course }) => {
                 <Card.Img variant='top' src={cover}></Card.Img>
                 <Card.Text>
                     {
-                        info.length > 2 ?
-                            <p>{info.slice(0, 250) + '...'} <Link to={`/courses/${id}`}>Read More</Link> </p>
+                        info.length > 50 ?
+                            <p>{info.slice(0, 100) + '...'} <Link to={`/courses/${id}`}><Button variant="outline-secondary">View More</Button></Link> </p>
                             : <p>{info}</p>
                     }
                 </Card.Text>

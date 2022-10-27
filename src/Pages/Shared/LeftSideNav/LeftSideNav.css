@@ -1,4 +1,5 @@
 .left-nav {
     border: 2px solid gray;
-    border-radius: 2px;
+    background: linear-gradient(to left, #FBFAFF, #F3F3FD);
+    border-radius: 5px;
 }

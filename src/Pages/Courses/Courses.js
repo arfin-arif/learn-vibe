@@ -9,7 +9,7 @@ import LeftSideNav from '../Shared/LeftSideNav/LeftSideNav';
 const Courses = () => {
 
     return (
-        <div>
+        <div className='mt-3'>
             <Container>
                 <Row>
                     <Col lg='2' className='d-none d-lg-block'>

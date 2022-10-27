@@ -3,13 +3,20 @@ import { Link, useLoaderData } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import { Button } from 'react-bootstrap';
 
+
+
+
+
+
 const ReadMoreCourse = () => {
     const course = useLoaderData();
     const { cover, instructor, title, info, ratings, id, price, category_id } = course;
 
 
     return (
+
         <div className='pb-5'>
+
             <Card className='container col-md-8 col-lg-6 col-xl-6 '>
                 <Card.Header>
                     <Card.Title>{title}</Card.Title>
