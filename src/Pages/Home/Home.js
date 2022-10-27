@@ -9,7 +9,7 @@ const Home = () => {
             <Container>
                 <Row>
 
-                    <Col lg='6' className='d-flex justify-content-center align-items-center'>
+                    <Col lg='6' className='d-flex justify-content-center align-items-center mt-2'>
                         <div>
                             <h1>Education Is A Path To Success In Life</h1>
                             <p>Education will help you to acquire whatever you want to earn.When people are educated, they can significantly contribute to their families and society in various aspects and fields, thus creating a stable and stimulating community !!!</p>

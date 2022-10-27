@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
-import Typewriter from 'typewriter-effect/dist/core';
+import { Typewriter } from 'react-simple-typewriter'
 
 
 const GetPremium = () => {
@@ -15,7 +15,24 @@ const GetPremium = () => {
                 <Card >
                     <Card.Img variant="top" src={cover} />
                     <Card.Body>
-                        <Card.Title className="text-success">Welcome You Have Enrolled <br /> {title}</Card.Title>
+
+
+
+                        <span style={{ color: 'red', fontFamily: "cursive", fontWeight: 'bold' }}>
+                            {/* Style will be inherited from the parent element */}
+                            <Typewriter
+                                words={['Welcome You Have Enrolled', `${title}`]}
+                                loop={5}
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+
+                            />
+                        </span>
+
+
                         <Card.Text>
                             You will get an email from us with your credential . Keep it secret don't share it with anyone.
                         </Card.Text>
