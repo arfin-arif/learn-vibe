@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
-
+import Typewriter from 'typewriter-effect/dist/core';
 
 
 const GetPremium = () => {
@@ -12,10 +12,10 @@ const GetPremium = () => {
         <div className='container d-flex justify-content-center align-items-center '>
             <div className='mb-5 mt-3'>
 
-                <Card style={{ width: '18rem' }}>
+                <Card style={{ width: '30rem' }}>
                     <Card.Img variant="top" src={cover} />
                     <Card.Body>
-                        <Card.Title>Welcome You Have Enrolled <br /> {title}</Card.Title>
+                        <Card.Title className="text-success">Welcome You Have Enrolled <br /> {title}</Card.Title>
                         <Card.Text>
                             You will get an email from us with your credential . Keep it secret don't share it with anyone.
                         </Card.Text>
