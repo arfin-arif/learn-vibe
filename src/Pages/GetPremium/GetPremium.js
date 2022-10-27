@@ -12,7 +12,7 @@ const GetPremium = () => {
         <div className='container d-flex justify-content-center align-items-center '>
             <div className='mb-5 mt-3'>
 
-                <Card style={{ width: '30rem' }}>
+                <Card >
                     <Card.Img variant="top" src={cover} />
                     <Card.Body>
                         <Card.Title className="text-success">Welcome You Have Enrolled <br /> {title}</Card.Title>
@@ -23,7 +23,7 @@ const GetPremium = () => {
                 </Card>
 
             </div>
-        </div>
+        </div >
     );
 };
 

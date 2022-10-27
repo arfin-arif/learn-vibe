@@ -99,8 +99,8 @@ const Login = () => {
                     </div>
 
                     <p>Log In Using</p>
-                    <FaGoogle onClick={handleGoogleSigIn}></FaGoogle>
-                    <FaGithub onClick={handleGitSignIn} className='ms-3'></FaGithub>
+                    <FaGoogle onClick={handleGoogleSigIn} className='h1'></FaGoogle>
+                    <FaGithub onClick={handleGitSignIn} className='ms-3 h1'></FaGithub>
 
                 </div>
 
