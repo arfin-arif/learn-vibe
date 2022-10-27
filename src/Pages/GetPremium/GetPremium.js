@@ -1,26 +1,24 @@
 import React from 'react';
-import { Button, Card, CardGroup } from 'react-bootstrap';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Card } from 'react-bootstrap';
+import { useLoaderData } from 'react-router-dom';
 
 const GetPremium = () => {
     const course = useLoaderData();
     const { cover, instructor, title, info, ratings, id, price, category_id } = course;
 
     return (
-        <div className='d-flex justify-content-center align-items-center login-container'>
-            <div className='log-in'>
-                <CardGroup>
-                    <Card>
-                        <Card.Img className='img-fluid' style={{ height: '250px', width: '250px' }} variant="top" src={cover} />
-                        <Card.Body>
-                            <Card.Title>{title}</Card.Title>
-                            <Card.Text>
-                                {info}
-                            </Card.Text>
-                        </Card.Body>
+        <div className='container d-flex justify-content-center align-items-center '>
+            <div className='mb-5'>
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src={cover} />
+                    <Card.Body>
+                        <Card.Title>Welcome You Have Enrolled <br /> {title}</Card.Title>
+                        <Card.Text>
+                            You will get an email from us with your credential . Keep it secret don't share it with anyone.
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
 
-                    </Card>
-                </CardGroup>
             </div>
         </div>
     );

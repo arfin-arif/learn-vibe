@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
 import Blog from "../../Pages/Blog/Blog";
 import CategoryPageCard from "../../Pages/CategoryPageCard/CategoryPageCard";
+
 import Course from "../../Pages/Course/Course";
 import Courses from "../../Pages/Courses/Courses";
 import FAQ from "../../Pages/FAQ/FAQ";
@@ -52,6 +53,7 @@ export const routes = createBrowserRouter([
                 path: '/category/:id',
                 element: <CategoryPageCard></CategoryPageCard>,
                 loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+
             },
             {
                 path: '/blog',

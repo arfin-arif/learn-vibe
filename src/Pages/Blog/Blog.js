@@ -2,8 +2,8 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div>
-            <h2 className='text-center mb-0'>Welcome to Learn Vibe Blog</h2>
+        <div className='pb-5'>
+            <h2 className='text-center mb-0 pb-3'>Welcome to Learn Vibe Blog</h2>
             <div className='container '>
                 <h5>Q. What is cors?</h5>
                 <p>CORS is a node. js package for providing a Connect/Express middleware that can be used to enable CORS with various options.</p>

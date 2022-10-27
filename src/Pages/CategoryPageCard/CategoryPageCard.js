@@ -3,11 +3,13 @@ import { useLoaderData } from 'react-router-dom';
 
 
 const CategoryPageCard = () => {
-    const allCourseByCategory = useLoaderData()
+    const allCoursesByCAtegory = useLoaderData()
+    const courses = allCoursesByCAtegory[0]
+    const { cover, instructor, title, info, ratings, id, price } = courses;
 
     return (
         <div>
-            <h2>{allCourseByCategory.category}</h2>
+            <h2>{title}</h2>
         </div>
     );
 };
