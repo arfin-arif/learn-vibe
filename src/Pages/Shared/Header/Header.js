@@ -39,7 +39,7 @@ const Header = () => {
                             <Nav.Link > <Link to='/blog'>Blog</Link> </Nav.Link>
                             <Nav.Link > <Link to='/faq'>FAQ</Link> </Nav.Link>
                         </Nav>
-                        <Nav className='d-flex  align-items-center'>
+                        <Nav className=''>
                             <Nav.Link>
                                 {
                                     user?.uid ?
@@ -55,9 +55,8 @@ const Header = () => {
                                             <Link to='/register'>Register </Link>
                                         </>
                                 }
-
                             </Nav.Link>
-                            <Nav.Link eventKey={2} href="#memes">
+                            <Nav.Link eventKey={2} >
                                 {user?.photoURL ?
                                     <OverlayTrigger
                                         placement="right"

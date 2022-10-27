@@ -34,7 +34,6 @@ const Register = () => {
     };
 
     const handleUpdateUserProfile = (name, photoURL) => {
-
         const profile = {
             displayName: name,
             photoURL: photoURL
@@ -56,8 +55,8 @@ const Register = () => {
             <div className='log-in'>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Your Name</Form.Label>
-                        <Form.Control type="text" name='name' placeholder="Enter Your Name" />
+                        <Form.Label>Full Name</Form.Label>
+                        <Form.Control type="text" name='name' placeholder="Enter Your Full Name" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Photo URL</Form.Label>
@@ -88,7 +87,7 @@ const Register = () => {
                     <Form.Text className="text-danger">
                         {error}
                     </Form.Text>
-                    <p>Already have Account ?<Link to='/register' ><span className='register-now'>Log In</span></Link> </p>
+                    <p>Already have an Account ?<Link to='/login' ><span className='register-now'>Log In</span></Link> </p>
                 </Form>
             </div>
         </div>

@@ -6,7 +6,7 @@ const Course = () => {
     const courses = useLoaderData()
 
     return (
-        <>
+        < >
 
             {courses.map(course => <CourseSummaryCard
                 key={course.id}

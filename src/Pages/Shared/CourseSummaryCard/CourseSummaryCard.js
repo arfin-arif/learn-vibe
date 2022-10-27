@@ -3,14 +3,14 @@ import { Image } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import { FaDollarSign, FaEye, FaRegBookmark, FaShareAlt, FaStar } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
-
+import './CourseSummaryCard.css'
 
 const CourseSummaryCard = ({ course }) => {
 
     const { cover, instructor, title, info, ratings, id, price } = course;
     const { name, profile } = instructor;
     return (
-        <Card className="mb-5">
+        <Card className="mb-5 col-12 col-sm-5 col-lg-5  ms-lg-5 ms-sm-4">
             <Card.Header className='d-flex justify-content-between align-items-center'>
                 <div className='d-flex'>
                     <Image

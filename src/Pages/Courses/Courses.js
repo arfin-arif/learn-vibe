@@ -16,13 +16,9 @@ const Courses = () => {
                         <LeftSideNav></LeftSideNav>
                     </Col>
                     <Col lg='10'>
-                        <Container>
-                            <Row>
-                                <Col >
-                                    <Course></Course>
-                                </Col>
-                            </Row>
-                        </Container>
+                        <div className='row'>
+                            <Course></Course>
+                        </div>
                     </Col>
 
                 </Row>

@@ -9,25 +9,26 @@ const ReadMoreCourse = () => {
 
 
     return (
-        <Card className='container'>
-            <Card.Title>{title}</Card.Title>
-
-            <Card.Body>
-                <Card.Img className='' src={cover} />
-                <Card.Text>
-                    {info}
-                </Card.Text>
-                {/* <Link to={`/category/${category_id}`}>
-                    <Button variant="primary">All News In This Category </Button>
-                </Link> */}
-                <div className='d-flex justify-content-between align-items-center'>
-                    <Button variant="dark">Download Detail </Button>
-
+        <div className='pb-5'>
+            <Card className='container col-md-8 col-lg-6 col-xl-6 '>
+                <Card.Header>
+                    <Card.Title>{title}</Card.Title>
+                    <div className='d-flex justify-content-between align-items-center'>
+                        <Button variant="dark">Download Detail </Button>
+                    </div>
+                </Card.Header>
+                <Card.Body>
+                    <Card.Img className='' src={cover} />
+                    <Card.Text>
+                        {info}
+                    </Card.Text>
+                </Card.Body>
+                <Card.Footer>
                     <Link to={`/course/premium/${id}`} ><Button variant="dark">Get premium </Button></Link>
-                </div>
+                </Card.Footer>
+            </Card>
+        </div>
 
-            </Card.Body>
-        </Card>
     );
 };
 
