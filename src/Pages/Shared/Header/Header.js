@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Button, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import LeftSideNav from '../LeftSideNav/LeftSideNav';
-import { FaBook, FaUser } from "react-icons/fa";
+import { FaBook, FaMoon, FaSun, FaUser } from "react-icons/fa";
 import { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 import './Header.css'
+import { useState } from 'react';
 
 const Header = () => {
+    const [mood, setMood] = useState(localStorage.getItem('mood') || 'light')
     const { user, logOut } = useContext(AuthContext)
+    // darkMood function
+    const toggleMood = () => {
+        if (mood === 'light') {
+            setMood('dark');
+        } else {
+            setMood('light');
+        }
+    };
+    useEffect(() => {
+        localStorage.setItem('mood', mood);
+        document.body.className = mood;
+    }, [mood]);
+
+
+    //tooltip function
     const renderTooltip = (props) => (
         <Tooltip id="button-tooltip" {...props}>
             {user?.displayName}
@@ -56,6 +73,20 @@ const Header = () => {
                                         </>
                                 }
                             </Nav.Link>
+                            {/* dark mood */}
+                            <Nav.Link>
+                                {
+                                    mood === 'light' ?
+                                        <>
+                                            <FaMoon onClick={toggleMood}></FaMoon>
+                                        </>
+                                        :
+                                        <>
+                                            <FaSun onClick={toggleMood}></FaSun>
+                                        </>
+                                }
+                            </Nav.Link>
+
                             <Nav.Link eventKey={2} >
                                 {user?.photoURL ?
                                     <OverlayTrigger

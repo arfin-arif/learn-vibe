@@ -1,6 +1,7 @@
 .login-container {
     height: 500px;
-    background: linear-gradient(to left, #FBF2F3, #FEF6F3);
+    color: #6C757D;
+
 }
 
 .divider:after,

@@ -2,5 +2,15 @@
     position: sticky;
     top: 0;
     z-index: 100;
+    background: #E3DFF0;
+}
+
+.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+.light {
     background: linear-gradient(to left, #FBFAFF, #F3F3FD);
+    color: #333;
 }

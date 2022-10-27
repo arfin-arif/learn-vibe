@@ -45,6 +45,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user)
                 setError('')
+                navigate(from, { replace: true })
 
             })
             .catch(error => {
@@ -59,6 +60,7 @@ const Login = () => {
                 const user = result.user;
                 setUser(user)
                 console.log(user)
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.log(error)
