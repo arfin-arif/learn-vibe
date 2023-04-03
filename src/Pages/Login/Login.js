@@ -70,10 +70,11 @@ const Login = () => {
     return (
 
 
-        <div className='d-flex justify-content-center align-items-center login-container'>
-            <div className='log-in'>
+        <div className='d-flex justify-content-center  align-items-center login-container'>
+            <div style={{ width: '20rem' }} className='log-in border border-dark'>
+                <h3 className='text-center'>Log In</h3>
                 <Form onSubmit={handleSubmit}>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Group className="mb-3 " controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control className='' type="email" name='email' placeholder="Enter email" required />
 
@@ -87,9 +88,12 @@ const Login = () => {
                         {error}
                     </Form.Text>
                     <br />
-                    <Button variant="primary" type="submit">
-                        Login
-                    </Button>
+                    <div className='text-center mb-2'>
+
+                        <Button variant="primary" type="submit">
+                            Login
+                        </Button>
+                    </div>
                 </Form>
 
                 <p>New to Learn Vibe ?<Link to='/register'> <span className='register-now'>Register Now</span> </Link> </p>

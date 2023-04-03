@@ -51,8 +51,9 @@ const Register = () => {
 
 
     return (
-        <div className='d-flex justify-content-center align-items-center login-container  '>
-            <div className='log-in'>
+        <div className='d-flex m-5 justify-content-center align-items-center login-container  '>
+            <div style={{ width: '24rem' }} className='log-in border  border-dark w-full' >
+                <h3 className='text-center'>Register</h3>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Full Name</Form.Label>
@@ -79,10 +80,13 @@ const Register = () => {
                             onClick={handleAccepted}
                             label={<>Accept <Link to='/terms'>Terms And Conditions</Link> </>} />
                     </Form.Group>
+                    <div className='text-center'>
 
-                    <Button variant="primary" type="submit" disabled={!accepted}>
-                        Register
-                    </Button>
+                        <Button variant="primary" type="submit" disabled={!accepted}>
+                            Register
+                        </Button>
+                    </div>
+
                     <br />
                     <Form.Text className="text-danger">
                         {error}
